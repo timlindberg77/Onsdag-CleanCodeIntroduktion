@@ -144,6 +144,29 @@
                 var Hamburbur = new Burger();
                 Hamburbur.ReadInfo();
                 Hamburbur.DescribeBurger();
+
+                //Extra roligt: kör två burgare och låt dem “tävla” om vem som låter godast.
+                var Hamburbur2 = new Burger();
+                Hamburbur2.ReadInfo();
+                Hamburbur2.DescribeBurger();
+
+                //fighting genom att få ett random nummer, ett eller 2 och får en vinnare
+                Random Fight = new Random();
+                int number = Fight.Next(1, 3);
+                Console.WriteLine($"följande burgare van");
+
+                {
+                    if (number == 2)
+                    {
+                        Hamburbur2.DescribeBurger();
+                    }
+                    else
+                    {
+                        
+                        Hamburbur.DescribeBurger();
+                    }
+                }
+
             }
 
 
