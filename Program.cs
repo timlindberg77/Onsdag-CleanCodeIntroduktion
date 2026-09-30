@@ -136,40 +136,64 @@
             //ReadInfo() låter användaren bygga en egen burgare via Console.
             //DescribeBurger() skriver ut:
             //“Din burgare har Ljust bröd, Nötkött och Ost som topping.”
+            //{
+            //    Createburger();
+            //}
+            //static void Createburger()
+            //{
+            //    var Hamburbur = new Burger();
+            //    Hamburbur.ReadInfo();
+            //    Hamburbur.DescribeBurger();
+
+            //    //Extra roligt: kör två burgare och låt dem “tävla” om vem som låter godast.
+            //    var Hamburbur2 = new Burger();
+            //    Hamburbur2.ReadInfo();
+            //    Hamburbur2.DescribeBurger();
+
+            //    //fighting genom att få ett random nummer, ett eller 2 och får en vinnare
+            //    Random Fight = new Random();
+            //    int number = Fight.Next(1, 3);
+            //    Console.WriteLine($"följande burgare van");
+
+            //        if (number == 2)
+            //        {
+            //            Hamburbur2.DescribeBurger();
+            //        }
+            //        else
+            //        {
+
+            //            Hamburbur.DescribeBurger();
+            //        }
+
+            //}
+
+            //Visa OOP i vardagsobjekt.
+            //Klass Car med Brand, Model, Color.
+            //ReadInfo() frågar användaren om bilen.
+            //ShowCar() skriver ut:
+            //“Din bil är en röd Volvo V70.”
+
             {
-                Createburger();
+                CreateCar();
             }
-            static void Createburger()
+            static void CreateCar()
             {
-                var Hamburbur = new Burger();
-                Hamburbur.ReadInfo();
-                Hamburbur.DescribeBurger();
+                var Car1 = new Car();
+                Car1.ReadInfo();
 
-                //Extra roligt: kör två burgare och låt dem “tävla” om vem som låter godast.
-                var Hamburbur2 = new Burger();
-                Hamburbur2.ReadInfo();
-                Hamburbur2.DescribeBurger();
+                Console.WriteLine("Nästa bil");
+                var Car2 = new Car();
+                Car2.ReadInfo();
 
-                //fighting genom att få ett random nummer, ett eller 2 och får en vinnare
-                Random Fight = new Random();
-                int number = Fight.Next(1, 3);
-                Console.WriteLine($"följande burgare van");
 
-                {
-                    if (number == 2)
-                    {
-                        Hamburbur2.DescribeBurger();
-                    }
-                    else
-                    {
-                        
-                        Hamburbur.DescribeBurger();
-                    }
-                }
+                //👉 Extra twist: Låt användaren mata in två bilar och kör en “bilshow”:
 
+                Console.WriteLine($"Bilshow!!!!");
+                Console.WriteLine($"Första bilen är en:");
+                Car1.ShowCar();
+                Console.WriteLine($"och andra bilen är en:");
+                Car2.ShowCar();
             }
-
-
         }
     }
 }
