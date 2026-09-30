@@ -91,31 +91,49 @@
             //Skapa en klass Person med Name, Age, FavoriteColor.
             //Lägg till en metod Introduce() som skriver ut en presentation.
             //Skapa två personer och låt dem presentera sig
-            Person Person1 = new Person();
-            Person1.Name = "Paul";
-            Person1.Age = 18;
-            Person1.FavoritColor = "Blue";
+            //Person Person1 = new Person();
+            //Person1.Name = "Paul";
+            //Person1.Age = 18;
+            //Person1.FavoritColor = "Blue";
 
-            Person Person2 = new Person();
-            Person2.Name = "Nemo";
-            Person2.Age = 32;
-            Person2.FavoritColor = "Black";
+            //Person Person2 = new Person();
+            //Person2.Name = "Nemo";
+            //Person2.Age = 32;
+            //Person2.FavoritColor = "Black";
 
-            //Fråga om deras info via Consolen - Console.ReadLine().
-            Console.WriteLine("Hej Användaren, Säg Hej till Paul eller Nemo!");
-            String Usersvar = Console.ReadLine()!.ToLower();
-            if (Usersvar.Contains("paul"))
+            ////Fråga om deras info via Consolen - Console.ReadLine().
+            //Console.WriteLine("Hej Användaren, Säg Hej till Paul eller Nemo!");
+            //String Usersvar = Console.ReadLine()!.ToLower();
+            //if (Usersvar.Contains("paul"))
+            //{
+            //    Person1.Introduce();
+            //}
+            //else if (Usersvar.Contains("nemo"))
+            //{
+            //    Person2.Introduce();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("SÄG HEJ TILL EN AV DEM NU!");
+            //}
+
+            //Skapa en klass Pet med Name, AnimalType (t.ex.hund / katt / kanin), och FavoriteFood.
+            //Metod ReadInfo() frågar användaren om dessa värden.
+            //Metod Introduce() skriver ut:
+            //“Jag heter Fido, jag är en hund och jag älskar köttbullar!”
+
+            //👉 I Main: kör bara CreateAndIntroducePets(); som sköter allt.
             {
-                Person1.Introduce();
+                CreateAndIntroducePets();
             }
-            else if (Usersvar.Contains("nemo"))
+            static void CreateAndIntroducePets()
             {
-                Person2.Introduce();
+                var pet = new Pet();
+                pet.ReadInfo();
+                pet.Introduce();
             }
-            else
-            {
-                Console.WriteLine("SÄG HEJ TILL EN AV DEM NU!");
-            }
+
+
         }
-     }
+    }
 }
