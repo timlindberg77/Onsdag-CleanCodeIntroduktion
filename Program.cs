@@ -54,41 +54,68 @@
             //Den introducerar strängmanipulation, if-else -satser och loopar.
 
             //Instruktioner:
-            //Be användaren att ange ett lösenord.
-            //Använd en rad villkor för att kontrollera:
-            Console.WriteLine("Skapa ett lösenord: ");
-            String UserPassword = Console.ReadLine()!;
-            //Lösenordets längd(bör vara minst 8 tecken).
-            bool PassWordLengthCheck = UserPassword.Length >= 8;
-            //Innehåller både stora och små bokstäver.
-            bool PassWordCapitalLeters = UserPassword.Any(char.IsUpper) && UserPassword.Any(char.IsLower);
-            //Innehåller minst ett nummer.
-            bool PassWordNumberCheck = UserPassword.Any(char.IsDigit);
-            //Innehåller minst ett specialtecken.
-            bool PassWordSpecialLettersCheck = UserPassword.Any(x => !char.IsLetterOrDigit(x));
-            //skapar ett poäng systemsom för if satsen lättare
-            int PassWordCheckPoints = 0;
-            if (PassWordLengthCheck) PassWordCheckPoints++;
-            if (PassWordCapitalLeters) PassWordCheckPoints++;
-            if (PassWordNumberCheck) PassWordCheckPoints++;
-            if (PassWordSpecialLettersCheck) PassWordCheckPoints++;
-            //Ge feedback om lösenordet är "Svagt", "Moderat" eller "Starkt" baserat på dessa kontroller.
-            if (PassWordCheckPoints == 2 || PassWordCheckPoints == 3) 
+            ////Be användaren att ange ett lösenord.
+            ////Använd en rad villkor för att kontrollera:
+            //Console.WriteLine("Skapa ett lösenord: ");
+            //String UserPassword = Console.ReadLine()!;
+            ////Lösenordets längd(bör vara minst 8 tecken).
+            //bool PassWordLengthCheck = UserPassword.Length >= 8;
+            ////Innehåller både stora och små bokstäver.
+            //bool PassWordCapitalLeters = UserPassword.Any(char.IsUpper) && UserPassword.Any(char.IsLower);
+            ////Innehåller minst ett nummer.
+            //bool PassWordNumberCheck = UserPassword.Any(char.IsDigit);
+            ////Innehåller minst ett specialtecken.
+            //bool PassWordSpecialLettersCheck = UserPassword.Any(x => !char.IsLetterOrDigit(x));
+            ////skapar ett poäng systemsom för if satsen lättare
+            //int PassWordCheckPoints = 0;
+            //if (PassWordLengthCheck) PassWordCheckPoints++;
+            //if (PassWordCapitalLeters) PassWordCheckPoints++;
+            //if (PassWordNumberCheck) PassWordCheckPoints++;
+            //if (PassWordSpecialLettersCheck) PassWordCheckPoints++;
+            ////Ge feedback om lösenordet är "Svagt", "Moderat" eller "Starkt" baserat på dessa kontroller.
+            //if (PassWordCheckPoints == 2 || PassWordCheckPoints == 3) 
+            //{
+            //    Console.WriteLine("Lösenordet är  moderat");
+            //}
+            //else if (PassWordCheckPoints == 4)
+            //{
+            //    Console.WriteLine("Lösenordet är Starkt");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Lösenordet är för svagt");
+            //}
+            ////testat poängystemet
+            //Console.WriteLine($"{PassWordCheckPoints}");
+
+            //Skapa en klass Person med Name, Age, FavoriteColor.
+            //Lägg till en metod Introduce() som skriver ut en presentation.
+            //Skapa två personer och låt dem presentera sig
+            Person Person1 = new Person();
+            Person1.Name = "Paul";
+            Person1.Age = 18;
+            Person1.FavoritColor = "Blue";
+
+            Person Person2 = new Person();
+            Person2.Name = "Nemo";
+            Person2.Age = 32;
+            Person2.FavoritColor = "Black";
+
+            //Fråga om deras info via Consolen - Console.ReadLine().
+            Console.WriteLine("Hej Användaren, Säg Hej till Paul eller Nemo!");
+            String Usersvar = Console.ReadLine()!.ToLower();
+            if (Usersvar.Contains("paul"))
             {
-                Console.WriteLine("Lösenordet är  moderat");
+                Person1.Introduce();
             }
-            else if (PassWordCheckPoints == 4)
+            else if (Usersvar.Contains("nemo"))
             {
-                Console.WriteLine("Lösenordet är Starkt");
+                Person2.Introduce();
             }
             else
             {
-                Console.WriteLine("Lösenordet är för svagt");
+                Console.WriteLine("SÄG HEJ TILL EN AV DEM NU!");
             }
-            //testat poängystemet
-            Console.WriteLine($"{PassWordCheckPoints}");
-           
-
         }
-    }
+     }
 }
