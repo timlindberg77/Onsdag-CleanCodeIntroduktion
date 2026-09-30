@@ -11,17 +11,17 @@ namespace Onsdag_CleanCodeIntroduktion
         public string AnimalType;
         public string FavoritFood;
         //Metod ReadInfo() frågar användaren om dessa värden.
-        public void ReadInfo()
-        {
-            Console.WriteLine($"Vad heter Djuret?");
-            Name = Console.ReadLine()!;
+        //public void ReadInfo()
+        //{
+        //    Console.WriteLine($"Vad heter Djuret?");
+        //    Name = Console.ReadLine()!;
 
-            Console.WriteLine($"Vad är {Name} för typ av djur?");
-            AnimalType = Console.ReadLine()!;
+        //    Console.WriteLine($"Vad är {Name} för typ av djur?");
+        //    AnimalType = Console.ReadLine()!;
 
-            Console.WriteLine($"Vad är är {Name}s favorit mat?");
-            FavoritFood = Console.ReadLine()!;
-        }
+        //    Console.WriteLine($"Vad är är {Name}s favorit mat?");
+        //    FavoritFood = Console.ReadLine()!;
+        //}
         //Metod Introduce() skriver ut:
         //“Jag heter Fido, jag är en hund och jag älskar köttbullar!”
         public void Introduce()

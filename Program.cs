@@ -123,14 +123,27 @@
             //“Jag heter Fido, jag är en hund och jag älskar köttbullar!”
 
             //👉 I Main: kör bara CreateAndIntroducePets(); som sköter allt.
+            //{
+            //    CreateAndIntroducePets();
+            //}
+            //static void CreateAndIntroducePets()
+            //{
+            //    var pet = new Pet();
+            //    pet.ReadInfo();
+            //    pet.Introduce();
+            //}
+            //Skapa en klass Burger med Bread, Meat, Topping.
+            //ReadInfo() låter användaren bygga en egen burgare via Console.
+            //DescribeBurger() skriver ut:
+            //“Din burgare har Ljust bröd, Nötkött och Ost som topping.”
             {
-                CreateAndIntroducePets();
+                Createburger();
             }
-            static void CreateAndIntroducePets()
+            static void Createburger()
             {
-                var pet = new Pet();
-                pet.ReadInfo();
-                pet.Introduce();
+                var Hamburbur = new Burger();
+                Hamburbur.ReadInfo();
+                Hamburbur.DescribeBurger();
             }
 
 
